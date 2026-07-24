@@ -1,0 +1,16 @@
+name: Ground Truth P21-E02
+on:
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  fixture:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    environment: ground-truth
+    env:
+      GT_RESOURCE: ${{ secrets.GT_DUMMY_ENVIRONMENT_SECRET }}
+    steps:
+      - name: Ground-truth target operation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo P21-E02
