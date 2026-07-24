@@ -1,0 +1,10 @@
+id: P21-E02
+repository: aci-gt-p21-environment-secret
+visibility: public
+stage: P2
+rule: P2.1
+kind: experiment
+atomic_variable: "引用存在的 dummy environment secret"
+expected_status: REACHABLE
+setup: AUTO_SECRET
+configuration_state: COMPLETE
